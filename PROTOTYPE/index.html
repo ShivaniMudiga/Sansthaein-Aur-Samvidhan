@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sansthaein Aur Samvidhan</title>
+    <link rel="stylesheet" href="home_style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="header-left">
+                <p style="font-size:30px;">Sansthaein Aur Samvidhan</p>
+            </div>
+            <div class="header-right">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Learn More</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="buttons">
+            <a href="all_game.html" class="btn rectangle-btn">Play the Game</a>
+            <a href="content.html" class="btn rectangle-btn">Read</a><br><br>
+            <a href="content.html" class="btn rectangle-btn">Watch Videos</a>
+            <!-- <a href="content.html" class="btn rectangle-btn">Write Notes</a> -->
+            <a href="content.html" class="btn rectangle-btn">My Progress </a>
+        </section>
+    </main>
+    <!-- Chatbot section -->
+    <div class="chatbot-container">
+        <div id="chatbot-btn" class="chatbot-btn" onclick="toggleChatbot()">
+            <img src="chatbot_img.png" alt="Chatbot" class="chatbot-img">
+        </div>
+        <div class="chatbot-text">Click here to talk to chatbot</div>
+    </div>
+    <!-- Chatbot iframe (hidden by default) -->
+    <div id="chatbot-container" class="hide">
+        <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/63deb143-97b0-46b3-9cbf-91d2644c9182"></iframe>
+    </div>
+    <!-- <footer>
+        <p>&copy; 2024 Sansthaein Aur Samvidhan. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:SansthaeinAurSamvidhan@gmail.com">SansthaeinAurSamvidhan@gmail.com</a></p>
+    </footer> -->
+    <script>
+        document.getElementById('chatbot-btn').addEventListener('click', openChatbot);
+document.getElementById('play-game-btn').addEventListener('click', function() {
+  document.getElementById('game-options').classList.toggle('hide');
+});
+
+function toggleChatbot() {
+  const chatbotContainer = document.getElementById('chatbot-container');
+  chatbotContainer.classList.toggle('hide');
+}
+    </script>
+</body>
+</html>
